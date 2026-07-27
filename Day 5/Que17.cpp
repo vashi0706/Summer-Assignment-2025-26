@@ -1,0 +1,24 @@
+/* Question 17: Write a program to Check perfect number. */
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, sum = 0;
+    cout << "Enter a number: ";
+    cin >> num;
+
+    // Us number ke saare proper factors ka sum nikal rahe hain
+    for (int i = 1; i <= num / 2; i++) {
+        if (num % i == 0) {
+            sum += i;
+        }
+    }
+
+    if (sum == num && num > 0)
+        cout << num << " is a Perfect number." << endl;
+    else
+        cout << num << " is NOT a Perfect number." << endl;
+
+    return 0;
+}
